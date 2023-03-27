@@ -34,7 +34,7 @@ Copy the command below to clone our repository into your environment
 The analysis example is done for more than one sample but you can classify TME subtype for only one sample too.**
 
 
-All the analyses are done in the From_cel_files.ipynb notebook which is separated to 2 main sections and 1 additional section if the user wants to add his/her/their own reference cohort on which the classification will be done.
+All the analyses are done in the [TME_Classification.ipynb](TME_Classification.ipynb) notebook which is separated to 2 main sections and 1 additional section if the user wants to add his/her/their own reference cohort on which the classification will be done.
 
 
 The pipeline consists of several nodes that correspond to each other where some of them are optional(depends on user choice):
