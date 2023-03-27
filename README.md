@@ -1,12 +1,14 @@
-# Introduction
+# Molecular functional portrait analysis and Tumor microenvironment classification.
+
+## Introduction
 Tumor microenvironment (TME) plays a significant role in clinical outcomes and response to therapy. By exerting pro- and anti-tumorigenic actions, tumor-infiltrating immune cells can profoundly influence tumor progression as well as the success of anti-cancer therapies. In addition, cancer-associated fibroblasts (CAFs) as well as angiogenic signals from stromal cells have been shown to affect outcomes.
 Based on a curated list of 29 functional gene expressions (Figure 1) ssGSEA score the TME subtype classifications are done. Materials provided in this repository help to identify the TME subtype of an input sample (or you can use the examples in chorots files). 
 
-                                                                         Fig. 1
+![image2020-11-4_18-20-47](https://user-images.githubusercontent.com/127855909/228009303-964b1147-0f42-4361-819b-bc22be9ccd97.png)
 
 In BostonGene based on the analyses above we developed a way to create samples Molecular Functional Portrait which is a planetary schematic representation of integrated molecular and functional characteristics of a tumor and its microenvironment that depicts the prevalence of malignant and tumor microenvironment (TME) cell populations, and the activity of tumor promoting and suppressing processes. The portrait includes qualitative and quantitative descriptions of modules built based on the expression of BostonGene curated 29 gene expression signatures (reference manuscript and table), with the size of each module corresponding to the intensity of the normalized single-sample gene set enrichment analysis (GSEA) score, and the colors denoting pro- (red) or anti-cancer activity (blue).A short introduction to each TME subtype you can see in Figure 2.
 
-                                                                            Fig.2
+![image2020-11-4_18-12-26](https://user-images.githubusercontent.com/127855909/228009221-3fe09cc9-a30a-4d3f-aa4b-3641c6278f7e.png)
 
 
 ## Citation
@@ -65,5 +67,5 @@ To make the analyses flow easier to understand we created a corresponding graph 
 
 The graph below introduces the whole analysis flow.
 
-
+![MFP prediction flowchart](https://user-images.githubusercontent.com/127855909/228008558-4a7163ba-9c23-4107-b2f9-85d674b41499.jpg)
 
