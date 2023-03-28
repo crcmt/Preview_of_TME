@@ -24,7 +24,7 @@ https://science.bostongene.com/tumor-portrait/
 Please, when using the provided material for research and publication make a reference to this repository and the article.
 
 ## Setup
-If your environment is already set up according to the requirements in the description of Setup.md file, you only just have to clone the github repository and start your analysis.
+If your environment is already set up according to the requirements in the description of  [Setup.md](Setup.md) file, you only just have to clone the github repository and start your analysis.
 Copy the command below to clone our repository into your environment 
 
 
