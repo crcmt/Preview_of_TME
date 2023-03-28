@@ -27,7 +27,9 @@ Please, when using the provided material for research and publication make a ref
 If your environment is already set up according to the requirements in the description of Setup.md file, you only just have to clone the github repository and start your analysis.
 Copy the command below to clone our repository into your environment 
 
-**git clone https://github.com/BostonGene/MFP.git**
+
+    git clone https://github.com/BostonGene/MFP.git
+
 
 ## Implementation overview
 **Note: 
