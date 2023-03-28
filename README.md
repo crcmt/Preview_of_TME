@@ -33,10 +33,18 @@ Copy the command below to clone our repository into your environment
 
 ## Implementation overview
 **Note: 
-The analysis example is done for more than one sample but you can classify TME subtype for only one sample too.**
+The analysis example is done for a cohort you must not try to do TME classification analyses for only one sample too.**
 
 
-All the analyses are done in the [TME_Classification.ipynb](TME_Classification.ipynb) notebook which is separated to 2 main sections and 1 additional section if the user wants to add his/her/their own reference cohort on which the classification will be done.
+To make the analyses flow easier to understand we created a corresponding graph which is introduced below and helps to visually see every step of the analysis and its priority level.
+
+
+The graph below introduces the whole analysis flow.
+
+![MFP prediction flowchart](https://user-images.githubusercontent.com/127855909/228008558-4a7163ba-9c23-4107-b2f9-85d674b41499.jpg)
+
+
+All the analyses are done in the [TME_Classification.ipynb](TME_Classification.ipynb) notebook which is separated to 2 main sections and 1 additional section if the user wants to add their own reference cohort on which the classification will be done.
 
 
 The pipeline consists of several nodes that correspond to each other where some of them are optional(depends on user choice):
@@ -64,10 +72,6 @@ It is recommended to use the default TCGA cohort that is already processed so th
 
 There is also **Methods_Description_-_Batch_correction.ipynb** notebook which is not necessary for classification analyses but it gives more information how the batch correction and outlier detection analyses were done in the article.
 
-To make the analyses flow easier to understand we created a corresponding graph which is introduced below and helps to visually see every step of the analysis and its priority level.
 
 
-The graph below introduces the whole analysis flow.
-
-![MFP prediction flowchart](https://user-images.githubusercontent.com/127855909/228008558-4a7163ba-9c23-4107-b2f9-85d674b41499.jpg)
 
