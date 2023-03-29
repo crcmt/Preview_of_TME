@@ -39,7 +39,9 @@ Please follow the instructions in the same order to not have any problems with i
 
 
 After completing all of the above steps use the command below to install jupyter notebook on your device. 
-pip install notebook
+
+
+    pip install notebook
 
 
 **After the installation of the notebook please restart your device, enter the command below to start the jupyter notebook.
