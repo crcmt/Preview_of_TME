@@ -35,29 +35,18 @@ Please follow the instructions in the same order to not have any problems with i
 
     sudo apt-get update
     sudo apt-get install python3.10-venv python3.10-dev python3-pip
-    python3.10 -m venv MFP_env
+    
+    
+    
+***Installation of python using apt source***
 
 
-After completing all of the above steps use the command below to install jupyter notebook on your device. 
-
-
-    pip install notebook
-
-
-**After the installation of the notebook please restart your device, enter the command below to start the jupyter notebook.
-jupyter notebook**
-
-
-After opening the notebook, complete all of the remaining steps using its terminal.
-
-
-    source MFP_env/bin/activate
-    cd MFP_env
     clone https://github.com/BostonGene/MFP
     cd MFP
-    pip install --upgrade pip wheel --no-cache-dir
-    pip install -r requirements.txt --no-cache-dir
-
+    bash make_tme_environment.sh
+    
+    
+make_tme_environment.sh creates python3.10 environment with all necessary packages and creates ipykernel core for environment with name tme_env
 
 ***Installation of python using conda***
 
@@ -68,7 +57,7 @@ If you want to create a python environment via conda please follow the link belo
 https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/installing-with-conda.html
 
 
-***Install the jupyter kernel for your environment***
+***Install the jupyter kernel for your environment (for conda)***
 
 
     python -m ipykernel install --user --name=MFP_env
