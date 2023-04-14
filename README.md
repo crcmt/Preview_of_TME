@@ -2,7 +2,7 @@
 
 ## Introduction
 Tumor microenvironment (TME) plays a significant role in clinical outcomes and response to therapy. By exerting pro- and anti-tumorigenic actions, tumor-infiltrating immune cells can profoundly influence tumor progression as well as the success of anti-cancer therapies. In addition, cancer-associated fibroblasts (CAFs) as well as angiogenic signals from stromal cells have been shown to affect outcomes.
-Based on a curated list of 29 functional gene expressions (shown on figure below) ssGSEA score the TME subtype classifications are done. Materials provided in this repository help to identify the TME subtype of an input sample (or you can use the example files in ![Cohorts](Cohorts) folder). 
+Based on a curated list of 29 functional gene expressions (shown on figure below) ssGSEA score the TME subtype classifications are done. Materials provided in this repository help to identify the TME subtype of an input sample (or you can use the example files in ![Cohorts](Cohorts) folder ). 
 
 ![image2020-11-4_18-20-47](https://user-images.githubusercontent.com/127855909/228009303-964b1147-0f42-4361-819b-bc22be9ccd97.png)
 
