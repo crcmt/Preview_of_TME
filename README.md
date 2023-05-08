@@ -1,30 +1,34 @@
 # Molecular functional portrait analysis and Tumor microenvironment classification.
 
 ## Introduction
-Tumor microenvironment (TME) plays a significant role in clinical outcomes and response to therapy. By exerting pro- and anti-tumorigenic actions, tumor-infiltrating immune cells can profoundly influence tumor progression as well as the success of anti-cancer therapies. In addition, cancer-associated fibroblasts (CAFs) as well as angiogenic signals from stromal cells have been shown to affect outcomes.
-Based on a curated list of 29 functional gene expressions (shown on figure below) ssGSEA score the TME subtype classifications are done. Materials provided in this repository help to identify the TME subtype of an input sample (or you can use the example files in ![Cohorts](Cohorts) folder ). 
+Tumor microenvironment (TME) plays a significant role in clinical outcomes and response to antineoplastic therapy. By exerting pro-tumorigenic and anti-tumorigenic actions, tumor-infiltrating immune cells can profoundly influence tumor progression and affect the success of anti-cancer treatments. Cancer-associated fibroblasts (CAFs), as well as angiogenic signals from stromal cells, have also been shown to affect outcomes in cancer patients. 
+
+
+BostonGene has compiled a curated list of 29 functional genes and  uses single-sample Gene Set Enrichment Analysis (ssGSEA) scores of their expression levels to classify a tumor sample into one of theTME subtypes (shown in Fig. 1 below) Materials provided in this repository will help to identify the TME subtype of an input sample (or you can use the example files in the Cohorts folder).
 
 ![image2020-11-4_18-20-47](https://user-images.githubusercontent.com/127855909/228009303-964b1147-0f42-4361-819b-bc22be9ccd97.png)
 
-In BostonGene based on the analyses above we developed a way to create samples Molecular Functional Portrait which is a planetary schematic representation of integrated molecular and functional characteristics of a tumor and its microenvironment that depicts the prevalence of malignant and tumor microenvironment (TME) cell populations, and the activity of tumor promoting and suppressing processes. The portrait includes qualitative and quantitative descriptions of modules built based on the expression of BostonGene curated 29 gene expression signatures (reference manuscript and table), with the size of each module corresponding to the intensity of the normalized single-sample gene set enrichment analysis (GSEA) score, and the colors denoting pro- (red) or anti-cancer activity (blue).A short introduction to each TME subtype with its MFP portrait you can see in on figure below.
+Using data on the gene expression profiles shown above, BostonGene developed a test that results in creating a Molecular Functional Portrait of a tumor sample.
+
+
+Molecular Functional Portrait (MFP) is a schematic planetary representation of integrated molecular and functional characteristics of a tumor and its microenvironment that depicts the prevalence of malignant cells and TME cell populations, as well as the activity of tumor-promoting and tumor-suppressing processes. An MFP includes qualitative and quantitative descriptions of several modules built based on the expression patterns of BostonGene curated 29-gene signatures (reference manuscript and table). The size of each module corresponds to the intensity of the normalized single-sample gene set enrichment analysis (ssGSEA) score; the red color denotes pro-cancer processes, while blue color shows anti-cancer processes. Fig. 2 provides short descriptions of each TME subtype with its corresponding MFP portrait.
+
 
 ![image2020-11-4_18-12-26](https://user-images.githubusercontent.com/127855909/228009221-3fe09cc9-a30a-4d3f-aa4b-3641c6278f7e.png)
 
 
 ## Citation
-This repository and all of its content are linked to “Integrated tumor exome and transcriptome analyses reveal conserved pan-cancer microenvironment subtypes predictive of response to immunotherapy” article. For the article look in the link below:
-
-https://www.cell.com/cancer-cell/fulltext/S1535-6108(21)00222-1
-
-For more information visit to BostonGene’s scientific portal using the following link: 
-
-https://science.bostongene.com/tumor-portrait/ 
+If software, data, and/or website are used in your publication, please cite [Bagaev A et al. Conserved pan-cancer microenvironment subtypes predict response to immunotherapy. Cancer Cell. 2021 Jun 14;39(6):845-865](https://www.cell.com/cancer-cell/fulltext/S1535-6108(21)00222-1#articleInformation)
+and make a reference to this repository.
 
 
-Please, when using the provided materials for research and publication make a reference to this repository and the article.
+For more information visit [BostonGene’s scientific portal](https://science.bostongene.com/tumor-portrait/)
+
 
 ## Setup
-If your environment is already set up according to the requirements in the description of  [Setup.md](Setup.md) file, you only just have to clone the github repository and start your analysis.
+If your environment is already set up according to the requirements in the description of Setup.md file, clone the github repository to start your analysis.
+
+
 Copy the command below to clone our repository into your environment 
 
 
@@ -32,8 +36,7 @@ Copy the command below to clone our repository into your environment
 
 
 ## Implementation overview
-**Note: 
-The analysis example is done for a cohort you must not try to do TME classification analyses for only one sample too.**
+**Note: The example analysis is performed for a cohort. Do not perform  TME classification analyses for one sample only.**
 
 
 To make the analyses flow easier to understand we created a corresponding graph which is introduced below and helps to visually see every step of the analysis and its priority level.
