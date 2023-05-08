@@ -55,26 +55,25 @@ The pipeline consists of several nodes that correspond to each other where some 
 
 * Data preparation (optional if you already have your expression matrix)
   * Data retrieval (and normalization if its from CEL files using R) 
-  * Generation of a .tsv file containing gene expression values with the HUGO symbols (again is done if your data is retrieved from microarray chip)
+  * Generation of a .tsv file containing gene expression values with genes identified by the HUGO symbols (for data retrieved from a microarray chip)
 * Quality Check (QC)
   * Batch detection
   * Outliers detection
   * Data distribution check for data quality
 * Classification
-  * Reading the expressions.tsv file to get the gene expression matrix of interested sample/samples
-  * Getting the reference genes signatures expressions matrix (TCGA cohort is set by default you can change it to the path to your reference cohort)
-  * Identifying the TME subtype of interested sample/samples by their ssGSEA score correspondence to reference cohorts ssGSEA scores
-  * Giving an output .tsv file containing information about the sample/samples TME subtype
-* Clusterization of a reference cohort (optional recommended using the default TCGA cohort)
+  * Reading the expressions.tsv file to get the gene expression matrix of the samples of interest
+  * Getting the reference gene signatures expressions matrix (TCGA cohort is set by default and can be changed to the path to your reference cohort)
+  * Identifying the TME subtype of the sample/samples of interest by comparing their ssGSEA score to the ssGSEA scores of the reference cohorts
+  * Giving an output .tsv file with the sample/samples TME subtype
+* Clusterization of a reference cohort (optional; we recommend using the default TCGA cohort)
   * Getting a reference cohort input
-  * Detecting TME subtype for each sample by its ssGSEA score
-  * Getting an output .tsv table that shows  a subtype of each sample in the reference cohort
+  * Identifying the TME subtype for each sample based on its ssGSEA score
+  * Getting an output .tsv table with the sample subtypes in the reference cohort
 
-**Note:
-It is recommended to use the default TCGA cohort that is already processed so that the analyses would not have any problem.**
+**Note: It is recommended to use the default TCGA cohort that has already been processed to avoid possible problems during analysis.**
 
 
-There is also **Methods_Description_-_Batch_correction.ipynb** notebook which is not necessary for classification analyses but it gives more information how the batch correction and outlier detection analyses were done in the article.
+You can also access the **Methods_Description_-_Batch_correction.ipynb** notebook, which is not necessary for the classification analysis but provides additional information on how the batch correction and outlier detection analyses were done in the article.
 
 
 
