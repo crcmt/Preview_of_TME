@@ -11,7 +11,7 @@ We recommend installing our Python virtual environment to perform the analysis. 
   * The packages are in install_R_packages.R
 * Jupyter notebook with its R and Python kernels
 * WSL (for Windows users)
-* 
+
 ## WSL installation
 If you are a Windows user, install WSL on your computer. If your operating system is Unix-based, skip this step.
 
