@@ -41,8 +41,7 @@ If your environment is already set up accordingly, clone the Github repository t
 The analysis workflow is presented in the diagram below, highlighting the main steps and logical elements of the notebook.
 
 
-![MFP prediction flowchart](https://user-images.githubusercontent.com/127855909/228008558-4a7163ba-9c23-4107-b2f9-85d674b41499.jpg)
-
+![MFP prediction flowchart](https://github.com/BenjaminSargsyan/Preview_of_TME/assets/127855909/59fae17e-adbe-424e-ab05-f13a6b2bee61)
 
 All the analyses are done in the [TME_Classification.ipynb](TME_Classification.ipynb) notebook which is separated into 2 main sections, 1 optional section introducing Data Preparation analyses and 1 additional section if the user wants to add their own reference cohort on which the classification will be done.
 
