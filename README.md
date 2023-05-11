@@ -4,45 +4,42 @@
 Tumor microenvironment (TME) plays a significant role in clinical outcomes and response to antineoplastic therapy. By exerting pro-tumorigenic and anti-tumorigenic actions, tumor-infiltrating immune cells can profoundly influence tumor progression and affect the success of anti-cancer treatments. Cancer-associated fibroblasts (CAFs), as well as angiogenic signals from stromal cells, have also been shown to affect outcomes in cancer patients. 
 
 
-BostonGene has compiled a curated list of 29 functional genes and  uses single-sample Gene Set Enrichment Analysis (ssGSEA) scores of their expression levels to classify a tumor sample into one of theTME subtypes (shown in Fig. 1 below) Materials provided in this repository will help to identify the TME subtype of an input sample (or you can use the example files in the Cohorts folder).
+BostonGene has compiled a curated list of 29 functional genes and uses single-sample Gene Set Enrichment Analysis (ssGSEA) scores of their expression levels to classify a tumor sample into one of the TME subtypes (Fig. 1). Materials provided in this repository will help to identify the TME type of an input sample.
 
 ![image2020-11-4_18-20-47](https://user-images.githubusercontent.com/127855909/228009303-964b1147-0f42-4361-819b-bc22be9ccd97.png)
 
-Using data on the gene expression profiles shown above, BostonGene developed a test that results in creating a Molecular Functional Portrait of a tumor sample.
+<p align="center">Figure 1. Types of tumor microenvironment.</p>
 
-
-Molecular Functional Portrait (MFP) is a schematic planetary representation of integrated molecular and functional characteristics of a tumor and its microenvironment that depicts the prevalence of malignant cells and TME cell populations, as well as the activity of tumor-promoting and tumor-suppressing processes. An MFP includes qualitative and quantitative descriptions of several modules built based on the expression patterns of BostonGene curated 29-gene signatures (reference manuscript and table). The size of each module corresponds to the intensity of the normalized single-sample gene set enrichment analysis (ssGSEA) score; the red color denotes pro-cancer processes, while blue color shows anti-cancer processes. Fig. 2 provides short descriptions of each TME subtype with its corresponding MFP portrait.
-
+Using data on the gene expression profiles shown above, BostonGene developed a test that results in creating a Molecular Functional Portrait of a tumor sample.A brief description of each type of TME and its graphical interpretation can be found in Fig. 2.
 
 ![image2020-11-4_18-12-26](https://user-images.githubusercontent.com/127855909/228009221-3fe09cc9-a30a-4d3f-aa4b-3641c6278f7e.png)
 
+<p align="center">Figure 2. TME types brief description.</p>
 
 ## Citation
-If software, data, and/or website are used in your publication, please cite [Bagaev A et al. Conserved pan-cancer microenvironment subtypes predict response to immunotherapy. Cancer Cell. 2021 Jun 14;39(6):845-865](https://www.cell.com/cancer-cell/fulltext/S1535-6108(21)00222-1#articleInformation)
-and make a reference to this repository.
+If software, data, and/or website are used in your publication, please cite [Bagaev A et al. Conserved pan-cancer microenvironment subtypes predict response to immunotherapy. Cancer Cell. 2021 Jun 14;39(6):845-865](https://www.cell.com/cancer-cell/fulltext/S1535-6108(21)00222-1#articleInformation) and make a reference to this repository.
 
 
-For more information visit [BostonGene’s scientific portal](https://science.bostongene.com/tumor-portrait/)
+For more information visit [BostonGene’s Scientific portal](https://science.bostongene.com/tumor-portrait/)
 
 
 ## Setup
-If your environment is already set up according to the requirements in the description of Setup.md file, clone the github repository to start your analysis.
+Set up your environment according to the requirements in the description of the Setup.md file in the repository.
 
 
-Copy the command below to clone our repository into your environment 
+If your environment is already set up accordingly, clone the Github repository to start your analysis.
+
 
 
     git clone https://github.com/BostonGene/MFP.git
 
 
 ## Implementation overview
-**Note: The example analysis is performed for a cohort. Do not perform  TME classification analyses for one sample only.**
+***Note: The example analysis is performed for a cohort. Do not perform TME classification analyses for just one sample.***
 
 
-To make the analyses flow easier to understand we created a corresponding graph which is introduced below and helps to visually see every step of the analysis and its priority level.
+The analysis workflow is presented in the diagram below, highlighting the main steps and logical elements of the notebook.
 
-
-The graph below introduces the whole analysis flow.
 
 ![MFP prediction flowchart](https://user-images.githubusercontent.com/127855909/228008558-4a7163ba-9c23-4107-b2f9-85d674b41499.jpg)
 
