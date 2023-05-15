@@ -69,4 +69,4 @@ The pipeline consists of several nodes that correspond to each other where some 
 **Note: It is recommended to use the default TCGA cohort to avoid possible problems during analysis.**
 
 
-You can also access the **Methods_Description_-_Batch_correction.ipynb** notebook, which provides additional information on how the batch correction and outlier detection analyses were done in the article.
+You can also access the [Data_processing_methods.ipynb](Data_processing_methods.ipynb) notebook, which provides additional information on how the batch correction and outlier detection analyses were done in the article.
