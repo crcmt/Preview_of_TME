@@ -59,18 +59,14 @@ The pipeline consists of several nodes that correspond to each other where some 
 * Classification
   * Reading the expressions.tsv file to get the gene expression matrix of the samples of interest
   * Getting the reference gene signatures expressions matrix (TCGA cohort is set by default and can be changed to the path to your reference cohort)
-  * Identifying the TME subtype of the sample/samples of interest by comparing their ssGSEA score to the ssGSEA scores of the reference cohorts
+  * Identifying the TME subtype of the sample/samples of interest by comparing their ssGSEA score to the ssGSEA scores of the reference cohort
   * Giving an output .tsv file with the sample/samples TME subtype
 * Clusterization of a reference cohort (optional; we recommend using the default TCGA cohort)
   * Getting a reference cohort input
   * Identifying the TME subtype for each sample based on its ssGSEA score
   * Getting an output .tsv table with the sample subtypes in the reference cohort
 
-**Note: It is recommended to use the default TCGA cohort that has already been processed to avoid possible problems during analysis.**
+**Note: It is recommended to use the default TCGA cohort to avoid possible problems during analysis.**
 
 
-You can also access the **Methods_Description_-_Batch_correction.ipynb** notebook, which is not necessary for the classification analysis but provides additional information on how the batch correction and outlier detection analyses were done in the article.
-
-
-
-
+You can also access the **Methods_Description_-_Batch_correction.ipynb** notebook, which provides additional information on how the batch correction and outlier detection analyses were done in the article.
