@@ -10,7 +10,7 @@ BostonGene has compiled a curated list of 29 functional genes and uses single-sa
 
 <p align="center">Figure 1. Types of tumor microenvironment.</p>
 
-Using data on the gene expression profiles shown above, BostonGene developed a test that results in creating a Molecular Functional Portrait of a tumor sample.A brief description of each type of TME and its graphical interpretation can be found in Fig. 2.
+A brief description of each type of TME and its graphical interpretation can be found in Fig. 2.
 
 ![image2020-11-4_18-12-26](https://user-images.githubusercontent.com/127855909/228009221-3fe09cc9-a30a-4d3f-aa4b-3641c6278f7e.png)
 
