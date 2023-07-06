@@ -42,7 +42,7 @@ The analysis workflow is presented in the diagram below, highlighting the main s
 
 ![MFP prediction flowchart ](https://github.com/BenjaminSargsyan/Preview_of_TME/assets/127855909/e3e19c0c-1b67-4242-ab4f-52262b3a3d6c)
 
-The analysis comprises two notebooks: [TME_Classification.ipynb](TME_Classification.ipynb) and GEO_retrieval.ipynb.
+The analysis comprises two notebooks: [TME_Classification.ipynb](TME_Classification.ipynb) and [GEO_data_retrieval.ipynb](GEO_data_retrieval.ipynb).
 
 TME_Classification.ipynb serves as the primary component of the analysis, encompassing various sections for data processing and classification. It includes an additional section allowing users to incorporate their own reference cohort for classification purposes.
 
