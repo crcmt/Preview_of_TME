@@ -42,15 +42,17 @@ The analysis workflow is presented in the diagram below, highlighting the main s
 
 ![MFP prediction flowchart (1)](https://github.com/BenjaminSargsyan/Preview_of_TME/assets/127855909/df7b1c6e-bf5e-42af-9b71-b2c133facc68)
 
-All the analyses are done in the [TME_Classification.ipynb](TME_Classification.ipynb) notebook which is separated into 2 main sections, 1 optional section introducing Data Preparation analyses and 1 additional section if the user wants to add their own reference cohort on which the classification will be done.
+The analysis comprises two notebooks: [TME_Classification.ipynb](TME_Classification.ipynb) and GEO_retrieval.ipynb.
 
+TME_Classification.ipynb serves as the primary component of the analysis, encompassing various sections for data processing and classification. It includes an additional section allowing users to incorporate their own reference cohort for classification purposes.
+
+For users intending to download their data from GEO before initiating the analyses, the GEO_retrieval.ipynb notebook is available. This notebook provides a dedicated framework for data retrieval specifically from GEO, enabling seamless integration into the subsequent analysis pipeline.
 
 
 The pipeline consists of several nodes that correspond to each other where some of them are optional(depends on user choice):
 
-* Data preparation (optional if you already have your expression matrix)
-  * Data retrieval (and normalization if its from CEL files using R) 
-  * Generation of a .tsv file containing gene expression values with genes identified by the HUGO symbols (for data retrieved from a microarray chip)
+* Data preparation
+  * Data retrieval (and normalization) 
 * Quality Check (QC)
   * Batch detection
   * Outliers detection
