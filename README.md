@@ -40,7 +40,7 @@ If your environment is already set up accordingly, clone the Github repository t
 
 The analysis workflow is presented in the diagram below, highlighting the main steps and logical elements of the notebook.
 
-![MFP prediction flowchart (1)](https://github.com/BenjaminSargsyan/Preview_of_TME/assets/127855909/df7b1c6e-bf5e-42af-9b71-b2c133facc68)
+![MFP prediction flowchart ](https://github.com/BenjaminSargsyan/Preview_of_TME/assets/127855909/e3e19c0c-1b67-4242-ab4f-52262b3a3d6c)
 
 The analysis comprises two notebooks: [TME_Classification.ipynb](TME_Classification.ipynb) and GEO_retrieval.ipynb.
 
