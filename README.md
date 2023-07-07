@@ -1,4 +1,4 @@
-# Molecular functional portrait analysis and Tumor microenvironment classification.
+# Conserved pan-cancer microenvironment subtypes.
 
 ## Introduction
 Tumor microenvironment (TME) plays a significant role in clinical outcomes and response to antineoplastic therapy. By exerting pro-tumorigenic and anti-tumorigenic actions, tumor-infiltrating immune cells can profoundly influence tumor progression and affect the success of anti-cancer treatments. Cancer-associated fibroblasts (CAFs), as well as angiogenic signals from stromal cells, have also been shown to affect outcomes in cancer patients. 
