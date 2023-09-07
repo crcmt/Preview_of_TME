@@ -1,15 +1,12 @@
-#!/usr/bin/env ipython
+#!/usr/bin/env python
 # coding: utf-8
 
 import warnings
 warnings.filterwarnings("ignore")
 
-get_ipython().run_line_magic('load_ext', 'autoreload')
-get_ipython().run_line_magic('matplotlib', 'inline')
-get_ipython().run_line_magic('config', 'IPCompleter.use_jedi = False')
-
 import sys
 import os
+import argparse
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -20,10 +17,8 @@ import csv
 import matplotlib.pyplot as plt
 import umap
 import matplotlib.pyplot as plt
-from IPython.display import SVG
 from tqdm import tqdm_notebook
 
-get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'png'")
 plt.rcParams['pdf.fonttype'] = 'truetype'
 plt.rcParams['svg.fonttype'] = 'none'
 plt.rcParams['figure.dpi'] = 120
@@ -34,13 +29,15 @@ from portraits.utils import read_gene_sets, ssgsea_formula, median_scale
 from portraits.classification import KNeighborsClusterClassifier
 from portraits.clustering import clustering_profile_metrics, clustering_profile_metrics_plot,clustering_select_best_tr
 
-get_ipython().run_line_magic('load_ext', 'rpy2.ipython')
+# Args
+
+p = argparse.ArgumentParser()
+p.add_argument('expression_file')
+args = p.parse_args()
 
 # Constants
 
-EXPRESSION_MATRIX = sys.argv[1]
-#EXPRESSION_MATRIX = 'subset_1s_tcga.tsv'
-
+EXPRESSION_MATRIX = args.expression_file
 TCGA_SIGNATURES = 'Cohorts/Pan_TCGA/signatures.tsv'
 TCGA_COHORTS_ANNOTATION = 'Cohorts/Pan_TCGA/annotation.tsv'
 CLASSIFIED_SAMPLES = 'classified_samples.tsv'
@@ -54,8 +51,10 @@ annotated_expression.head(n=20)
 if all(0<=sample<=18 for sample in annotated_expression.mean()):
     print(annotated_expression.head())
 else:
+
     #annotated_expression = pd.log2(1+annotated_expression)
     annotated_expression = annotated_expression.transform(lambda x: np.log2(1+x))
+
     print(annotated_expression.head())
 
 # TME classification
