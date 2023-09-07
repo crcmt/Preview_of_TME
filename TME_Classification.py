@@ -33,6 +33,7 @@ from portraits.clustering import clustering_profile_metrics, clustering_profile_
 
 p = argparse.ArgumentParser()
 p.add_argument('expression_file')
+p.add_argument('-v', '--verbose', action='count', default=0)
 args = p.parse_args()
 
 # Constants
@@ -68,7 +69,9 @@ if not all(0<=sample<=18 for sample in annotated_expression.mean()):
 # Load Reference Cohort with known TME labels and gene expression values
 
 TCGA_signature_scores_scaled = pd.read_csv(TCGA_SIGNATURES, sep='\t', index_col=0).T  # Signatures in rows
-print(f'Reference annotation provided for {len(TCGA_signature_scores_scaled)} samples')
+
+if args.verbose > 0:
+    print(f'Reference annotation provided for {len(TCGA_signature_scores_scaled)} samples')
 
 TCGA_annotation = pd.read_csv(TCGA_COHORTS_ANNOTATION, sep='\t', index_col=0)  # Contains MFP cluster labels in MFP column
 
@@ -78,15 +81,20 @@ MODEL = KNeighborsClusterClassifier(norm=False, scale=False, clip=2, k=35).fit(T
 # Read signatures
 gene_signatures = read_gene_sets(GENE_SIGNATURES) # GMT format like in MSIGdb
 
-print(f'Loaded {len(gene_signatures)} signatures')
+if args.verbose > 0:
+    print(f'Loaded {len(gene_signatures)} signatures')
 
 # Read expressions
 gene_expressions = pd.read_csv(EXPRESSION_MATRIX, sep='\t', index_col=0)  # log2+1 transformed; Genes should appear to be in rows
 
-print(f'Classifying cohort, N={len(gene_expressions)} samples')
+if args.verbose > 0:
+    print(f'Classifying cohort, N={len(gene_expressions)} samples')
 
 if gene_expressions.max().max() > 35:
-    print('Performing log2+1 transformation')
+
+    if args.verbose > 0:
+        print('Performing log2+1 transformation')
+
     gene_expressions = np.log2(1+gene_expressions)
     
 # Classify the input cohort and give the output .tsv file with the TME subtype for each sample
@@ -107,9 +115,11 @@ data_ = signature_scores_scaled[MODEL.X.columns]
 # Predict clusters
 classified_samples = MODEL.predict(data_).rename('TME')
 
-#Output the predicted clusters
-print('Predicted labels count:')
-print(classified_samples.value_counts())
+if args.verbose > 0:
+
+    #Output the predicted clusters
+    print('Predicted labels count:')
+    print(classified_samples.value_counts())
 
 # Output the classified samples table
 classified_samples.to_csv(CLASSIFIED_SAMPLES, sep='\t', index=True)
