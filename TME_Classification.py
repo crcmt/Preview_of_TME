@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/opt/TME_MFP_env/bin/python
 # coding: utf-8
 
 import warnings
@@ -48,14 +48,12 @@ annotated_expression.head(n=20)
 
 # check if expression matrix is normalized if not log2 transform it.
 
-if all(0<=sample<=18 for sample in annotated_expression.mean()):
-    print(annotated_expression.head())
-else:
+if not all(0<=sample<=18 for sample in annotated_expression.mean()):
 
     #annotated_expression = pd.log2(1+annotated_expression)
     annotated_expression = annotated_expression.transform(lambda x: np.log2(1+x))
 
-    print(annotated_expression.head())
+#print(annotated_expression.head())
 
 # TME classification
 
@@ -70,10 +68,9 @@ else:
 # Load Reference Cohort with known TME labels and gene expression values
 
 TCGA_signature_scores_scaled = pd.read_csv(TCGA_SIGNATURES, sep='\t', index_col=0).T  # Signatures in rows
-print(f'Reference signatures provided for {len(TCGA_signature_scores_scaled)} samples')
+print(f'Reference annotation provided for {len(TCGA_signature_scores_scaled)} samples')
 
 TCGA_annotation = pd.read_csv(TCGA_COHORTS_ANNOTATION, sep='\t', index_col=0)  # Contains MFP cluster labels in MFP column
-print(f'Reference annotation provided for {len(TCGA_signature_scores_scaled)} samples')
 
 # Fit the model
 MODEL = KNeighborsClusterClassifier(norm=False, scale=False, clip=2, k=35).fit(TCGA_signature_scores_scaled, TCGA_annotation.MFP)
