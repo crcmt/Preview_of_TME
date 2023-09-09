@@ -82,12 +82,24 @@ if args.verbose > 0:
 
 # Read expressions
 gene_expressions = pd.read_csv(EXPRESSION_MATRIX, sep='\t', index_col=0)  # log2+1 transformed; Genes should appear to be in rows
-
 if args.verbose > 0:
     print(f'Classifying cohort, N={len(gene_expressions)} samples')
-
 if gene_expressions.max().max() > 35:
     gene_expressions = log2_(gene_expressions)
+
+# Scaling patch (to calculate the scaling when processing one sample only) - step 1
+# ---
+# Read expressions series
+gene_expressions_scaling_series = pd.read_csv(EXPRESSION_MATRIX_SCALING_SERIES, sep='\t', index_col=0)  # log2+1 transformed; Genes should appear to be in rows
+if gene_expressions_scaling_series.max().max() > 35:
+    gene_expressions_scaling_series = log2_(gene_expressions_scaling_series)
+# ---
+
+# Scaling patch (to calculate the scaling when processing one sample only) - step 2
+# ---
+# Merge sample and scaling series
+# FIXME
+# ---
 
 # Classify the input cohort and give the output .tsv file with the TME subtype for each sample
 
