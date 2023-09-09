@@ -122,5 +122,10 @@ if args.verbose > 0:
     print('Predicted labels count:')
     print(classified_samples.value_counts())
 
+# Scaling patch (to calculate the scaling when processing one sample only)
+# --- step 3
+# Remove scaling-series (keep only our sample (which is always in last position))
+classified_samples = classified_samples.iloc[[-1,]]
+
 # Output the classified samples table
 classified_samples.to_csv(CLASSIFIED_SAMPLES, sep='\t', index=True)
