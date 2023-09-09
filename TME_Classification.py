@@ -87,19 +87,16 @@ if args.verbose > 0:
 if gene_expressions.max().max() > 35:
     gene_expressions = log2_(gene_expressions)
 
-# Scaling patch (to calculate the scaling when processing one sample only) - step 1
-# ---
+# Scaling patch (to calculate the scaling when processing one sample only)
+# --- step 1
 # Read expressions series
 gene_expressions_scaling_series = pd.read_csv(EXPRESSION_MATRIX_SCALING_SERIES, sep='\t', index_col=0)  # log2+1 transformed; Genes should appear to be in rows
 if gene_expressions_scaling_series.max().max() > 35:
     gene_expressions_scaling_series = log2_(gene_expressions_scaling_series)
-# ---
-
-# Scaling patch (to calculate the scaling when processing one sample only) - step 2
-# ---
+# --- step 2
 # Merge sample and scaling series
-# FIXME
-# ---
+# (note: this is an *inner* join)
+gene_expressions_all = pd.merge(gene_expressions_scaling_series, gene_expressions, on='gene_id', how='inner')
 
 # Classify the input cohort and give the output .tsv file with the TME subtype for each sample
 
@@ -109,7 +106,7 @@ if gene_expressions_scaling_series.max().max() > 35:
 # analyzed samples.
 
 # Calc signature scores
-signature_scores = ssgsea_formula(gene_expressions, gene_signatures)
+signature_scores = ssgsea_formula(gene_expressions_all, gene_signatures)
 
 # Scale signatures
 signature_scores_scaled = median_scale(signature_scores)
