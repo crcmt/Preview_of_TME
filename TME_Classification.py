@@ -39,10 +39,18 @@ args = p.parse_args()
 # Constants
 
 EXPRESSION_MATRIX = args.expression_file
+EXPRESSION_MATRIX_SCALING_SERIES = 'Cohorts/fix_scaling/tcga/subset_10s_tcga.tsv'
 TCGA_SIGNATURES = 'Cohorts/Pan_TCGA/signatures.tsv'
 TCGA_COHORTS_ANNOTATION = 'Cohorts/Pan_TCGA/annotation.tsv'
 CLASSIFIED_SAMPLES = 'classified_samples.tsv'
 GENE_SIGNATURES = 'signatures/gene_signatures.gmt'
+
+# Func
+
+def log2_(df_):
+    if args.verbose > 0:
+        print('Performing log2+1 transformation')
+    return df_.transform(lambda x: np.log2(1+x))
 
 # TME classification
 
@@ -79,12 +87,8 @@ if args.verbose > 0:
     print(f'Classifying cohort, N={len(gene_expressions)} samples')
 
 if gene_expressions.max().max() > 35:
+    gene_expressions = log2_(gene_expressions)
 
-    if args.verbose > 0:
-        print('Performing log2+1 transformation')
-
-    gene_expressions = np.log2(1+gene_expressions)
-    
 # Classify the input cohort and give the output .tsv file with the TME subtype for each sample
 
 # The codeblock establishes to which subtype each sample belongs and then
