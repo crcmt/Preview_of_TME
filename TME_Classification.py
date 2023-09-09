@@ -128,4 +128,4 @@ if args.verbose > 0:
 classified_samples = classified_samples.iloc[[-1,]]
 
 # Output the classified samples table
-classified_samples.to_csv(CLASSIFIED_SAMPLES, sep='\t', index=True)
+classified_samples.to_csv(CLASSIFIED_SAMPLES, sep='\t', index=True, index_label='sample_id')
