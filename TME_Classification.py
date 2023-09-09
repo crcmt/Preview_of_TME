@@ -44,18 +44,6 @@ TCGA_COHORTS_ANNOTATION = 'Cohorts/Pan_TCGA/annotation.tsv'
 CLASSIFIED_SAMPLES = 'classified_samples.tsv'
 GENE_SIGNATURES = 'signatures/gene_signatures.gmt'
 
-annotated_expression = pd.read_csv(EXPRESSION_MATRIX, sep='\t', index_col=0)
-annotated_expression.head(n=20)
-
-# check if expression matrix is normalized if not log2 transform it.
-
-if not all(0<=sample<=18 for sample in annotated_expression.mean()):
-
-    #annotated_expression = pd.log2(1+annotated_expression)
-    annotated_expression = annotated_expression.transform(lambda x: np.log2(1+x))
-
-#print(annotated_expression.head())
-
 # TME classification
 
 # The classification section determines each sample subtype against the
