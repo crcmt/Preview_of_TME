@@ -13,7 +13,7 @@ then
 fi
 
 echo "Create new virtual environment with name: '$VENV_NAME'"
-python -m venv $VENV_PATH
+/usr/bin/python3 -m venv $VENV_PATH
 
 echo "Enter virtual environment"
 source $VENV_PATH/bin/activate
