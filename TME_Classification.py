@@ -127,5 +127,8 @@ if args.verbose > 0:
 # Remove scaling-series (keep only our sample (which is always in last position))
 classified_samples = classified_samples.iloc[[-1,]]
 
+# debug
+print(classified_samples)
+
 # Output the classified samples table
 classified_samples.to_csv(CLASSIFIED_SAMPLES, sep='\t', index=True, index_label='sample_id')
