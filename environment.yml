@@ -1,9 +1,0 @@
-name: MFP_env
-channels:
-  - conda-forge
-dependencies:
-  - python==3.8
-  - anaconda
-  - pip
-  - pip:
-    - -r file:requirements.txt
