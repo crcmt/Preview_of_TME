@@ -22,5 +22,5 @@ echo "Install packages"
 pip install --upgrade pip wheel --no-cache-dir
 pip install -r requirements.txt --no-cache-dir
 
-echo "Create jupyter kernel with name $VENV_NAME" | tr '[:upper:]' '[:lower:]'
-python -m ipykernel install --user --name="$VENV_NAME" 
+#echo "Create jupyter kernel with name $VENV_NAME" | tr '[:upper:]' '[:lower:]'
+#python -m ipykernel install --user --name="$VENV_NAME" 
