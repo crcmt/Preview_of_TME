@@ -1,4 +1,4 @@
-#!/opt/TME_MFP_env/bin/python
+#!/usr/bin/env -S python
 # coding: utf-8
 
 import warnings
